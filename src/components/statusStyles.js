@@ -3,7 +3,7 @@
 export const STATUS_META = {
   aprobada: {
     label: 'Aprobada', icon: 'check',
-    card: 'bg-brand-100/70 border-transparent dark:bg-brand-800/25',
+    card: 'bg-surface border-line',
     accent: 'bg-brand-500',
     pill: 'text-brand-800 dark:text-brand-300',
     dot: 'bg-brand-500',

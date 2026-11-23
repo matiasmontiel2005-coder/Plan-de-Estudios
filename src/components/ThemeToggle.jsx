@@ -10,7 +10,7 @@ export default function ThemeToggle() {
   }, [oscuro]);
   return (
     <button onClick={() => setOscuro(!oscuro)} aria-label={oscuro ? 'Activar modo claro' : 'Activar modo oscuro'}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-brand-50 transition hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300">
+      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line2 bg-surface transition hover:bg-tint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
       <Icon name={oscuro ? 'sun' : 'moon'} className="h-5 w-5" />
     </button>
   );

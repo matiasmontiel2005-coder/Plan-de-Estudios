@@ -56,29 +56,27 @@ export default function App() {
   return (
     <div className="min-h-screen pb-24 sm:pb-0">
       {/* Encabezado de marca con el avance general */}
-      <header className="relative overflow-hidden bg-brand-950 text-brand-50">
-        <div className="pointer-events-none absolute -right-24 -top-32 h-80 w-80 rounded-full bg-brand-800 opacity-70 blur-3xl" aria-hidden="true" />
-        <div className="pointer-events-none absolute -left-16 bottom-0 h-40 w-64 rounded-full bg-brand-500 opacity-20 blur-3xl" aria-hidden="true" />
+      <header className="relative border-b border-line bg-surface">
         <div className="relative mx-auto max-w-6xl px-4 pb-5 pt-4 sm:pb-7">
           <div className="flex items-center gap-3">
             <Logo className="h-9 w-9" />
             <div className="min-w-0 flex-1 leading-tight">
               <p className="text-base font-bold tracking-tight">Trayecto</p>
-              <p className="truncate text-xs text-brand-300">Ingeniería de Petróleos · FING UNCUYO<span className="hidden sm:inline"> · Plan 02/16</span></p>
+              <p className="truncate text-xs text-muted">Ingeniería de Petróleos · FING UNCUYO<span className="hidden sm:inline"> · Plan 02/16</span></p>
             </div>
             <ThemeToggle />
           </div>
           <div className="mt-5 flex items-end justify-between gap-4">
             <p className="text-4xl font-bold tracking-tight tabular-nums sm:text-5xl">
-              {stats.porcentaje.toFixed(0)}<span className="text-2xl text-brand-300 sm:text-3xl">%</span>
-              <span className="ml-2 align-middle text-sm font-medium text-brand-300">de la carrera</span>
+              {stats.porcentaje.toFixed(0)}<span className="text-2xl text-muted sm:text-3xl">%</span>
+              <span className="ml-2 align-middle text-sm font-medium text-muted">de la carrera</span>
             </p>
-            <p className="pb-1 text-right text-sm text-brand-300 tabular-nums">
-              <span className="font-semibold text-brand-50">{stats.hechas}</span>/{stats.total} materias
+            <p className="pb-1 text-right text-sm text-muted tabular-nums">
+              <span className="font-semibold text-current">{stats.hechas}</span>/{stats.total} materias
             </p>
           </div>
-          <div className="mt-3 h-2 overflow-hidden rounded-full bg-white/10" role="progressbar" aria-valuenow={Math.round(stats.porcentaje)} aria-valuemin={0} aria-valuemax={100} aria-label="Avance de la carrera">
-            <div className="h-full rounded-full bg-gradient-to-r from-brand-500 to-brand-300 transition-[width] duration-700" style={{ width: `${stats.porcentaje}%` }} />
+          <div className="mt-3 h-2 overflow-hidden rounded-full bg-tint" role="progressbar" aria-valuenow={Math.round(stats.porcentaje)} aria-valuemin={0} aria-valuemax={100} aria-label="Avance de la carrera">
+            <div className="h-full rounded-full bg-primary transition-[width] duration-700" style={{ width: `${stats.porcentaje}%` }} />
           </div>
         </div>
       </header>

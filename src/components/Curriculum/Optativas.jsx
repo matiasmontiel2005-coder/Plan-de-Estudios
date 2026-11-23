@@ -28,7 +28,7 @@ export default function Optativas({ catalogo, optativas, reglas, setOptativa }) 
         {lista.map((o) => {
           const d = optativas[o.id];
           return (
-            <li key={o.id} className={`rounded-xl border p-3 text-sm transition ${d ? 'border-transparent bg-brand-100/70 dark:bg-brand-800/25' : 'border-line'}`}>
+            <li key={o.id} className={`rounded-xl border p-3 text-sm transition ${d ? 'border-primary bg-surface' : 'border-line'}`}>
               <label className="flex cursor-pointer items-start gap-2.5 font-medium">
                 <input type="checkbox" className="mt-0.5 h-4 w-4 accent-[#166534]" checked={!!d}
                   onChange={(e) => setOptativa(o.id, e.target.checked ? { origen: 'examen' } : null)} />

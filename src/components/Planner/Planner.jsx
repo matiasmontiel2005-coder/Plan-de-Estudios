@@ -5,7 +5,7 @@ import Icon from '../Icon.jsx';
 import { Card, CardTitle, PageHeader } from '../ui.jsx';
 
 const ESTILO = {
-  ok: { icono: 'check', clases: 'border-brand-500/50 bg-brand-100/60 dark:bg-brand-800/25', badge: 'bg-primary text-onprimary', etiqueta: 'Habilitada' },
+  ok: { icono: 'check', clases: 'border-line bg-surface', badge: 'bg-primary text-onprimary', etiqueta: 'Habilitada' },
   aviso: { icono: 'alert', clases: 'border-amber-300 bg-amber-50 dark:border-amber-500/40 dark:bg-amber-400/10', badge: 'bg-amber-400 text-amber-950', etiqueta: 'Revisá' },
   error: { icono: 'lock', clases: 'border-red-300 bg-red-50 dark:border-red-500/40 dark:bg-red-500/10', badge: 'bg-red-600 text-white', etiqueta: 'No habilitada' },
 };

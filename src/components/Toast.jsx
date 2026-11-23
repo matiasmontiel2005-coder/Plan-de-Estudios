@@ -11,7 +11,7 @@ export default function Toast({ toast, onClose }) {
   if (!toast) return null;
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-20 z-50 flex justify-center px-4 sm:bottom-6" role="status" aria-live="polite">
-      <div className="pointer-events-auto flex max-w-md animate-slide-up items-center gap-3 rounded-2xl bg-brand-950 py-2.5 pl-4 pr-2 text-sm text-brand-50 shadow-lift dark:bg-brand-100 dark:text-brand-950">
+      <div className="pointer-events-auto flex max-w-md animate-slide-up items-center gap-3 rounded-2xl bg-zinc-900 py-2.5 pl-4 pr-2 text-sm text-zinc-50 shadow-lift dark:bg-zinc-100 dark:text-zinc-900">
         <Icon name="check" className="h-4 w-4 shrink-0 text-brand-300 dark:text-brand-800" />
         <span className="min-w-0 flex-1">{toast.texto}</span>
         {toast.deshacer && (
