@@ -41,7 +41,7 @@ export default function GraphView({ plan, evals, porId, onEdit }) {
     <div>
       <div className="mb-3 space-y-1">
         <Leyenda />
-        <p className="flex flex-wrap gap-x-4 text-xs text-slate-500 dark:text-slate-400">
+        <p className="flex flex-wrap gap-x-4 text-xs text-muted">
           <span>Pasá el mouse o tocá una materia.</span>
           <span><b className="text-amber-600">Naranja</b> = sus previas</span>
           <span><b className="text-emerald-600">Verde</b> = lo que desbloquea</span>
@@ -49,10 +49,10 @@ export default function GraphView({ plan, evals, porId, onEdit }) {
         </p>
       </div>
 
-      <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+      <div className="overflow-x-auto rounded-xl border border-line bg-surface">
         <div className="relative" style={{ width: ancho, height: alto }}>
           {semestres.map((s) => (
-            <div key={s} className="absolute text-xs font-semibold uppercase text-slate-400" style={{ left: PAD + (s - 1) * (W + GX), top: PAD - 4 }}>
+            <div key={s} className="absolute text-xs font-semibold uppercase text-muted" style={{ left: PAD + (s - 1) * (W + GX), top: PAD - 4 }}>
               Semestre {s}
             </div>
           ))}
@@ -61,7 +61,7 @@ export default function GraphView({ plan, evals, porId, onEdit }) {
               const a = pos[desde], b = pos[hasta];
               const x1 = a.x + W, y1 = a.y + H / 2, x2 = b.x, y2 = b.y + H / 2;
               const dx = Math.max(20, (x2 - x1) / 2);
-              let cls = 'stroke-slate-300 dark:stroke-slate-600', op = 0.7, sw = 1.2;
+              let cls = 'stroke-line2', op = 0.7, sw = 1.2;
               if (activa) {
                 if (hasta === activa) { cls = 'stroke-amber-500'; op = 1; sw = 2.5; }
                 else if (desde === activa) { cls = 'stroke-emerald-500'; op = 1; sw = 2.5; }
@@ -74,7 +74,7 @@ export default function GraphView({ plan, evals, porId, onEdit }) {
           {plan.materias.map((mat) => {
             const meta = STATUS_META[evals[mat.id].categoria];
             const relacionada = !activa || mat.id === activa || esPrevia(mat.id) || esSiguiente(mat.id);
-            const anillo = mat.id === activa ? 'ring-2 ring-indigo-500' : esPrevia(mat.id) ? 'ring-2 ring-amber-500' : esSiguiente(mat.id) ? 'ring-2 ring-emerald-500' : '';
+            const anillo = mat.id === activa ? 'ring-2 ring-primary' : esPrevia(mat.id) ? 'ring-2 ring-amber-500' : esSiguiente(mat.id) ? 'ring-2 ring-emerald-500' : '';
             return (
               <button key={mat.id} type="button"
                 onMouseEnter={() => setHover(mat.id)} onMouseLeave={() => setHover(null)}
@@ -91,15 +91,15 @@ export default function GraphView({ plan, evals, porId, onEdit }) {
       </div>
 
       {/* Detalle de la selección (tap en celular) */}
-      <div className="mt-3 min-h-[5rem] rounded-xl border border-slate-200 bg-white p-3 text-sm dark:border-slate-800 dark:bg-slate-900">
+      <div className="mt-3 min-h-[5rem] rounded-xl border border-line bg-surface p-3 text-sm">
         {m ? (
           <div className="space-y-1">
-            <p className="font-semibold">{m.nombre} <span className="text-xs font-normal text-slate-500">· {STATUS_META[evals[m.id].categoria].label}</span></p>
+            <p className="font-semibold">{m.nombre} <span className="text-xs font-normal text-muted">· {STATUS_META[evals[m.id].categoria].label}</span></p>
             <p><b className="text-amber-600">Previas directas:</b> {lista(previas[m.id])}</p>
             <p><b className="text-emerald-600">Desbloquea:</b> {lista(desbloquea[m.id])}</p>
-            <button onClick={() => onEdit(m.id)} className="mt-1 rounded-md bg-indigo-600 px-3 py-1 text-xs font-semibold text-white">Cambiar estado</button>
+            <button onClick={() => onEdit(m.id)} className="mt-1 rounded-md bg-primary px-3 py-1 text-xs font-semibold text-onprimary">Cambiar estado</button>
           </div>
-        ) : <p className="text-slate-500">Seleccioná una materia para ver sus previas y lo que desbloquea.</p>}
+        ) : <p className="text-muted">Seleccioná una materia para ver sus previas y lo que desbloquea.</p>}
       </div>
     </div>
   );

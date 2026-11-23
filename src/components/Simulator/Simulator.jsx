@@ -17,25 +17,25 @@ export default function Simulator({ plan, progress, evals }) {
     <div>
       <h3 className="font-semibold">{titulo}</h3>
       {items.length ? (
-        <ul className="mt-1 list-disc pl-5 text-sm">{items.map((m) => <li key={m.id}>{m.nombre} <span className="text-slate-500">({m.anio}.º año, sem. {m.semestre})</span></li>)}</ul>
-      ) : <p className="mt-1 text-sm text-slate-500">{vacio}</p>}
+        <ul className="mt-1 list-disc pl-5 text-sm">{items.map((m) => <li key={m.id}>{m.nombre} <span className="text-muted">({m.anio}.º año, sem. {m.semestre})</span></li>)}</ul>
+      ) : <p className="mt-1 text-sm text-muted">{vacio}</p>}
     </div>
   );
 
   return (
     <div className="mx-auto max-w-2xl space-y-4">
-      <p className="text-sm text-slate-600 dark:text-slate-300">Elegí una materia y mirá qué se habilitaría. No se guarda nada: es solo una simulación.</p>
+      <p className="text-sm text-muted">Elegí una materia y mirá qué se habilitaría. No se guarda nada: es solo una simulación.</p>
       <div className="grid gap-3 sm:grid-cols-[1fr_auto]">
         <SelectMateria materias={plan.materias} value={id} onChange={setId} filtro={(m) => evals[m.id].estado !== 'aprobada'} />
-        <div className="flex overflow-hidden rounded-lg border border-slate-300 dark:border-slate-600">
+        <div className="flex overflow-hidden rounded-lg border border-line2">
           {[['aprobada', 'Aprobar'], ['regularizada', 'Regularizar']].map(([v, l]) => (
-            <button key={v} onClick={() => setAccion(v)} className={`px-4 py-2 text-sm font-medium ${accion === v ? 'bg-indigo-600 text-white' : 'bg-white dark:bg-slate-800'}`}>{l}</button>
+            <button key={v} onClick={() => setAccion(v)} className={`px-4 py-2 text-sm font-medium ${accion === v ? 'bg-primary text-onprimary' : 'bg-surface'}`}>{l}</button>
           ))}
         </div>
       </div>
 
       {resultado && mat && (
-        <div className="space-y-4 rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+        <div className="space-y-4 rounded-xl border border-line bg-surface p-4">
           <p className="font-semibold">Si {accion === 'aprobada' ? 'aprobás' : 'regularizás'} «{mat.nombre}»:</p>
           {resultado.objetivo.estado === 'sin_cursar' && !resultado.objetivo.puedeCursar && (
             <p className="rounded-md bg-amber-100 p-2 text-sm text-amber-900 dark:bg-amber-900/40 dark:text-amber-100">

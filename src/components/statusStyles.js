@@ -2,8 +2,8 @@
 export const STATUS_META = {
   aprobada: {
     label: 'Aprobada',
-    card: 'bg-green-100 border-green-500 text-green-950 dark:bg-green-900/40 dark:border-green-500 dark:text-green-50',
-    dot: 'bg-green-500',
+    card: 'bg-brand-300/50 border-brand-500 text-brand-950 dark:bg-brand-800/60 dark:border-brand-500 dark:text-brand-100',
+    dot: 'bg-brand-500',
   },
   regularizada: {
     label: 'Regularizada',

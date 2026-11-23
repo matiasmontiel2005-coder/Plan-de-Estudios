@@ -31,10 +31,10 @@ export default function ImportExport({ plan, progress, onImport, onReset }) {
     }
   };
 
-  const boton = 'rounded-lg border border-slate-300 px-3 py-1.5 text-sm font-medium hover:bg-slate-100 dark:border-slate-600 dark:hover:bg-slate-800';
+  const boton = 'rounded-lg border border-line2 px-3 py-1.5 text-sm font-medium hover:bg-tint';
   return (
     <div className="mx-auto max-w-2xl space-y-4">
-      <p className="text-sm text-slate-600 dark:text-slate-300">
+      <p className="text-sm text-muted">
         Tu progreso se guarda solo en este navegador. Exportalo para tener una copia o para pasarlo a otro dispositivo.
       </p>
       <div className="flex flex-wrap gap-2">
@@ -43,7 +43,7 @@ export default function ImportExport({ plan, progress, onImport, onReset }) {
         <button className={`${boton} text-red-600`} onClick={() => window.confirm('Se descartan tus cambios y se vuelve a los datos de plan.json. ¿Continuar?') && (onReset(), setMensaje({ tipo: 'ok', texto: 'Progreso reiniciado.' }))}>↺ Reiniciar</button>
         <input ref={inputRef} type="file" accept="application/json,.json" className="hidden" onChange={importar} />
       </div>
-      {mensaje && <p role="status" className={`whitespace-pre-line text-sm ${mensaje.tipo === 'error' ? 'text-red-600' : 'text-green-600'}`}>{mensaje.texto}</p>}
+      {mensaje && <p role="status" className={`whitespace-pre-line text-sm ${mensaje.tipo === 'error' ? 'text-red-600' : 'text-primary'}`}>{mensaje.texto}</p>}
     </div>
   );
 }

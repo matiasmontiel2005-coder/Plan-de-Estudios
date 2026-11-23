@@ -9,7 +9,7 @@ export default function ThemeToggle() {
   }, [oscuro]);
   return (
     <button onClick={() => setOscuro(!oscuro)} aria-label="Cambiar entre modo claro y oscuro"
-      className="rounded-lg border border-slate-300 px-2.5 py-1.5 text-sm dark:border-slate-600">
+      className="rounded-full border border-white/30 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20">
       {oscuro ? '☀️' : '🌙'}
     </button>
   );

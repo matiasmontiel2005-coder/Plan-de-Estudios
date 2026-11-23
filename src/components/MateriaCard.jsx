@@ -8,7 +8,7 @@ export default function MateriaCard({ materia, ev, datos, porId, onClick }) {
     <button
       type="button"
       onClick={onClick}
-      className={`w-full rounded-lg border-2 p-2.5 text-left shadow-sm transition hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 ${meta.card}`}
+      className={`w-full rounded-xl border-2 p-2.5 text-left shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${meta.card}`}
     >
       <div className="flex items-start justify-between gap-2">
         <span className="text-sm font-semibold leading-tight">{materia.nombre}</span>
@@ -21,7 +21,7 @@ export default function MateriaCard({ materia, ev, datos, porId, onClick }) {
       <div className="mt-1 flex flex-wrap items-center gap-1 text-[11px]">
         <span className="font-medium">{meta.label}</span>
         {ev.puedeRendir && (
-          <span className="rounded bg-indigo-600 px-1.5 py-0.5 font-semibold text-white">Puede rendir</span>
+          <span className="rounded bg-primary px-1.5 py-0.5 font-semibold text-onprimary">Puede rendir</span>
         )}
         {ev.categoria === 'puede_cursar' && ev.faltaIngles && (
           <span className="rounded bg-amber-500 px-1.5 py-0.5 font-semibold text-black">Falta inglés B2</span>

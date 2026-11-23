@@ -31,15 +31,15 @@ export default function StateDialog({ materia, ev, datos, porId, onSave, onClose
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-0 sm:items-center sm:p-4" onClick={onClose}>
       <div role="dialog" aria-modal="true" aria-label={materia.nombre}
-        className="max-h-[90vh] w-full max-w-md overflow-y-auto rounded-t-2xl bg-white p-5 shadow-xl dark:bg-slate-900 sm:rounded-2xl"
+        className="max-h-[90vh] w-full max-w-md overflow-y-auto rounded-t-2xl bg-surface p-5 shadow-xl sm:rounded-2xl"
         onClick={(e) => e.stopPropagation()}>
         <h2 className="text-lg font-bold">{materia.nombre}</h2>
-        <p className="text-xs text-slate-500 dark:text-slate-400">
+        <p className="text-xs text-muted">
           Código {materia.id} · {materia.anio}.º año · semestre {materia.semestre} · hoy: {STATUS_META[ev.categoria].label}
         </p>
 
         {/* Información de disponibilidad */}
-        <div className="mt-3 space-y-1 rounded-lg bg-slate-100 p-3 text-xs dark:bg-slate-800">
+        <div className="mt-3 space-y-1 rounded-lg bg-tint p-3 text-xs">
           {ev.faltaAprobar.length > 0 && <p><b>Para cursar falta aprobar:</b> {nombres(ev.faltaAprobar)}</p>}
           {ev.faltaRegularizar.length > 0 && <p><b>Para cursar falta regularizar:</b> {nombres(ev.faltaRegularizar)}</p>}
           {ev.puedeCursar && <p>Correlativas para cursar: ✔ cumplidas.</p>}
@@ -53,7 +53,7 @@ export default function StateDialog({ materia, ev, datos, porId, onSave, onClose
           <div className="grid grid-cols-2 gap-2">
             {ESTADOS.map((e) => (
               <button key={e} type="button" onClick={() => setEstado(e)}
-                className={`rounded-lg border-2 px-3 py-2 text-sm font-medium ${estado === e ? 'border-indigo-600 bg-indigo-50 dark:bg-indigo-950' : 'border-slate-300 dark:border-slate-600'}`}>
+                className={`rounded-lg border-2 px-3 py-2 text-sm font-medium ${estado === e ? 'border-primary bg-tint' : 'border-line2'}`}>
                 {ETIQUETA_ESTADO[e]}
               </button>
             ))}
@@ -65,11 +65,11 @@ export default function StateDialog({ materia, ev, datos, porId, onSave, onClose
             <label className="text-sm font-medium">Nota
               <input type="number" min="0" max="10" step="any" value={nota} onChange={(e) => { setNota(e.target.value); setError(''); }}
                 placeholder="Sin nota"
-                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 dark:border-slate-600 dark:bg-slate-800" />
+                className="mt-1 w-full rounded-lg border border-line2 bg-surface px-3 py-2" />
             </label>
             <label className="text-sm font-medium">Origen
               <select value={origen} onChange={(e) => setOrigen(e.target.value)}
-                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 dark:border-slate-600 dark:bg-slate-800">
+                className="mt-1 w-full rounded-lg border border-line2 bg-surface px-3 py-2">
                 {Object.entries(ORIGEN_LABEL).map(([v, l]) => <option key={v} value={v}>{l}</option>)}
               </select>
             </label>
@@ -78,8 +78,8 @@ export default function StateDialog({ materia, ev, datos, porId, onSave, onClose
         {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
 
         <div className="mt-5 flex justify-end gap-2">
-          <button onClick={onClose} className="rounded-lg px-4 py-2 text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Cancelar</button>
-          <button onClick={guardar} className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700">Guardar</button>
+          <button onClick={onClose} className="rounded-lg px-4 py-2 text-sm font-medium hover:bg-tint">Cancelar</button>
+          <button onClick={guardar} className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-onprimary hover:opacity-90">Guardar</button>
         </div>
       </div>
     </div>

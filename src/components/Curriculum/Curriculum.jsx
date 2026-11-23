@@ -10,7 +10,7 @@ export default function Curriculum({ plan, evals, progress, porId, onSelect, set
     <div>
       <div className="mb-4 space-y-1">
         <Leyenda />
-        <p className="text-xs text-slate-500 dark:text-slate-400">Tocá una materia para cambiar su estado y cargar la nota. «P» = promoción.</p>
+        <p className="text-xs text-muted">Tocá una materia para cambiar su estado y cargar la nota. «P» = promoción.</p>
       </div>
       {anios.map((anio) => {
         const delAnio = plan.materias.filter((m) => m.anio === anio);
@@ -20,8 +20,8 @@ export default function Curriculum({ plan, evals, progress, porId, onSelect, set
             <h2 className="mb-2 text-lg font-bold">{anio}.º año</h2>
             <div className="grid gap-4 md:grid-cols-2">
               {semestres.map((sem) => (
-                <div key={sem} className="rounded-xl border border-slate-200 bg-white/60 p-3 dark:border-slate-800 dark:bg-slate-900/40">
-                  <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Semestre {sem}</h3>
+                <div key={sem} className="rounded-xl border border-line bg-surface p-3">
+                  <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted">Semestre {sem}</h3>
                   <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2">
                     {delAnio.filter((m) => m.semestre === sem).map((m) => (
                       <MateriaCard key={m.id} materia={m} ev={evals[m.id]} datos={progress.estados[m.id]} porId={porId} onClick={() => onSelect(m.id)} />

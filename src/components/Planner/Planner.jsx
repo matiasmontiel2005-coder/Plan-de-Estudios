@@ -3,7 +3,7 @@ import { validarPlanificacion } from '../../lib/planner.js';
 import SelectMateria from '../SelectMateria.jsx';
 
 const ESTILO = {
-  ok: ['✔', 'border-green-500 bg-green-50 dark:bg-green-950/40', 'Habilitada'],
+  ok: ['✔', 'border-brand-500 bg-tint', 'Habilitada'],
   aviso: ['⚠', 'border-amber-500 bg-amber-50 dark:bg-amber-950/40', 'Revisá'],
   error: ['✕', 'border-red-500 bg-red-50 dark:bg-red-950/40', 'No habilitada'],
 };
@@ -24,7 +24,7 @@ export default function Planner({ plan, progress, evals, porId, setPlanificador 
 
   return (
     <div className="mx-auto max-w-2xl space-y-5">
-      <p className="text-sm text-slate-600 dark:text-slate-300">
+      <p className="text-sm text-muted">
         Elegí las materias que querés cursar. Las correlativas se comparan con tu estado actual:
         lo que cursás en el mismo cuatrimestre no habilita a otra materia.
       </p>
@@ -34,7 +34,7 @@ export default function Planner({ plan, progress, evals, porId, setPlanificador 
         <div className="flex flex-wrap gap-2">
           {sugeridas.length ? sugeridas.map((m) => (
             <button key={m.id} onClick={() => agregar(m.id)} className="rounded-full border border-blue-600 bg-blue-100 px-3 py-1 text-sm font-medium text-blue-900 hover:bg-blue-200 dark:bg-blue-900/40 dark:text-blue-100">+ {m.nombre}</button>
-          )) : <span className="text-sm text-slate-500">No hay materias nuevas para agregar.</span>}
+          )) : <span className="text-sm text-muted">No hay materias nuevas para agregar.</span>}
         </div>
       </div>
 
@@ -46,9 +46,9 @@ export default function Planner({ plan, progress, evals, porId, setPlanificador 
       <div>
         <div className="mb-1 flex items-center justify-between">
           <h3 className="text-sm font-semibold">Mi cuatrimestre ({elegidas.length})</h3>
-          {elegidas.length > 0 && <button onClick={() => setPlanificador([])} className="text-xs text-slate-500 underline">Vaciar</button>}
+          {elegidas.length > 0 && <button onClick={() => setPlanificador([])} className="text-xs text-muted underline">Vaciar</button>}
         </div>
-        {resultado.length === 0 && <p className="text-sm text-slate-500">Todavía no elegiste materias.</p>}
+        {resultado.length === 0 && <p className="text-sm text-muted">Todavía no elegiste materias.</p>}
         <ul className="space-y-2">
           {resultado.map((r) => {
             const [icono, clases, etiqueta] = ESTILO[r.nivel];
@@ -58,7 +58,7 @@ export default function Planner({ plan, progress, evals, porId, setPlanificador 
                   <p className="font-semibold">{icono} {porId[r.id].nombre} <span className="text-xs font-normal">· {etiqueta}</span></p>
                   {r.motivos.map((t, i) => <p key={i} className="mt-0.5 text-xs">{t}</p>)}
                 </div>
-                <button onClick={() => quitar(r.id)} aria-label={`Quitar ${porId[r.id].nombre}`} className="shrink-0 rounded px-2 text-lg leading-none text-slate-500 hover:bg-black/10">×</button>
+                <button onClick={() => quitar(r.id)} aria-label={`Quitar ${porId[r.id].nombre}`} className="shrink-0 rounded px-2 text-lg leading-none text-muted hover:bg-black/10">×</button>
               </li>
             );
           })}
