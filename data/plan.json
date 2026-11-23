@@ -1,0 +1,1176 @@
+{
+ "carrera": "Ingeniería de Petróleos (12152) - FING UNCUYO",
+ "plan": "02/16",
+ "fuente": "SIU Guaraní, plan de estudio, 23/11/2026",
+ "reglas": {
+  "cursar": "correlativas cursadas (regularizadas o aprobadas); la lista del SIU ya incluye las correlativas de las correlativas como aprobadas",
+  "rendir": "todas las correlativas aprobadas",
+  "optativas": {
+   "cantidad": 4,
+   "puntos_requeridos": 100,
+   "puntos_por_optativa": 25,
+   "desde_semestre": 7,
+   "aprobadas": [
+    "Operaciones Mineras (02089) - nota 9, promoción"
+   ]
+  },
+  "ingles": "Examen B2 (00807) aprobado antes de inscribirse a materias del 10.º semestre",
+  "pps": "300 h; requiere aprobado todo hasta 4.º año + Producción I, Producción II, Reservorios III y Administración de Proyectos (el SIU la lista con correlativas propias, ver campo cursar)"
+ },
+ "optativas_disponibles": [
+  "Elaboración de Petróleos (00034)",
+  "Gestión Ambiental (00088)",
+  "Comercialización (00107)",
+  "Estudio de Impacto Ambiental (00159)",
+  "Procesamiento de Hidrocarburos (00202)",
+  "Gestión de Recursos Humanos (00808)",
+  "Comportamiento Organizacional (00809)",
+  "Introducción a la Investigación (00810)",
+  "Operaciones Off-Shore (00811)",
+  "Técnicas de Operación en Yacimientos Maduros y No Convencionales (00812)",
+  "Teledetección Aplicada a la Industria Petrolera (00813)",
+  "Biotecnología del Petróleo (00814)",
+  "Perforación en Aguas Profundas (01104)",
+  "Desarrollo de Campos en Aguas Profundas (01105)",
+  "Métodos de Predicción del Comportamiento de Yacimientos (01107)",
+  "Comportamiento de Pozos Fluyentes (01116)",
+  "Operaciones en Yacimientos de Crudos Pesados y Extra Pesados (01119)",
+  "Simulación Numérica de Yacimientos (01114)",
+  "Técnicas de Operación en Yacimientos de Gas (00893)",
+  "Planeación de la Perforación y Terminación de Pozos (01106)",
+  "Estimulación de Pozos (01115)",
+  "Energías Renovables (02090)",
+  "Operaciones Mineras (02089)"
+ ],
+ "materias": [
+  {
+   "id": "00001",
+   "nombre": "Álgebra",
+   "anio": 1,
+   "semestre": 1,
+   "cursar": {
+    "aprobadas": [],
+    "regularizadas": []
+   },
+   "rendir": {
+    "aprobadas": []
+   },
+   "estado": "aprobada",
+   "nota": 7,
+   "origen": "examen"
+  },
+  {
+   "id": "00002",
+   "nombre": "Análisis Matemático I",
+   "anio": 1,
+   "semestre": 1,
+   "cursar": {
+    "aprobadas": [],
+    "regularizadas": []
+   },
+   "rendir": {
+    "aprobadas": []
+   },
+   "estado": "aprobada",
+   "nota": 10,
+   "origen": "examen"
+  },
+  {
+   "id": "00003",
+   "nombre": "Geometría Analítica",
+   "anio": 1,
+   "semestre": 1,
+   "cursar": {
+    "aprobadas": [],
+    "regularizadas": []
+   },
+   "rendir": {
+    "aprobadas": []
+   },
+   "estado": "aprobada",
+   "nota": 9,
+   "origen": "examen"
+  },
+  {
+   "id": "00008",
+   "nombre": "Introducción a la Ingeniería de Petróleos",
+   "anio": 1,
+   "semestre": 1,
+   "cursar": {
+    "aprobadas": [],
+    "regularizadas": []
+   },
+   "rendir": {
+    "aprobadas": []
+   },
+   "estado": "aprobada",
+   "nota": 9,
+   "origen": "promocion"
+  },
+  {
+   "id": "00807",
+   "nombre": "Inglés (examen B2)",
+   "anio": 1,
+   "semestre": 1,
+   "cursar": {
+    "aprobadas": [],
+    "regularizadas": []
+   },
+   "rendir": {
+    "aprobadas": []
+   },
+   "estado": "sin_cursar"
+  },
+  {
+   "id": "00007",
+   "nombre": "Física I",
+   "anio": 1,
+   "semestre": 2,
+   "cursar": {
+    "aprobadas": [],
+    "regularizadas": [
+     "00002"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00002"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 8,
+   "origen": "examen"
+  },
+  {
+   "id": "00010",
+   "nombre": "Química General e Inorgánica",
+   "anio": 1,
+   "semestre": 2,
+   "cursar": {
+    "aprobadas": [],
+    "regularizadas": []
+   },
+   "rendir": {
+    "aprobadas": []
+   },
+   "estado": "aprobada",
+   "nota": 9,
+   "origen": "promocion"
+  },
+  {
+   "id": "00801",
+   "nombre": "Dibujo y Sistemas de Representación",
+   "anio": 1,
+   "semestre": 2,
+   "cursar": {
+    "aprobadas": [],
+    "regularizadas": []
+   },
+   "rendir": {
+    "aprobadas": []
+   },
+   "estado": "aprobada",
+   "nota": 9,
+   "origen": "promocion"
+  },
+  {
+   "id": "00012",
+   "nombre": "Análisis Matemático II",
+   "anio": 2,
+   "semestre": 3,
+   "cursar": {
+    "aprobadas": [
+     "00002"
+    ],
+    "regularizadas": [
+     "00001",
+     "00003"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00001",
+     "00002",
+     "00003"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 9,
+   "origen": "examen"
+  },
+  {
+   "id": "00013",
+   "nombre": "Cálculo Numérico y Computación",
+   "anio": 2,
+   "semestre": 3,
+   "cursar": {
+    "aprobadas": [],
+    "regularizadas": [
+     "00001"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00001"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 9,
+   "origen": "examen"
+  },
+  {
+   "id": "00015",
+   "nombre": "Física II",
+   "anio": 2,
+   "semestre": 3,
+   "cursar": {
+    "aprobadas": [
+     "00002"
+    ],
+    "regularizadas": [
+     "00007"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00002",
+     "00007"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 7,
+   "origen": "examen"
+  },
+  {
+   "id": "00020",
+   "nombre": "Estadística Técnica",
+   "anio": 2,
+   "semestre": 4,
+   "cursar": {
+    "aprobadas": [],
+    "regularizadas": [
+     "00001",
+     "00002"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00001",
+     "00002"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 7,
+   "origen": "promocion"
+  },
+  {
+   "id": "00026",
+   "nombre": "Química Orgánica",
+   "anio": 2,
+   "semestre": 4,
+   "cursar": {
+    "aprobadas": [
+     "00010"
+    ],
+    "regularizadas": []
+   },
+   "rendir": {
+    "aprobadas": [
+     "00010"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 7,
+   "origen": "promocion"
+  },
+  {
+   "id": "00028",
+   "nombre": "Termodinámica General y Aplicada",
+   "anio": 2,
+   "semestre": 4,
+   "cursar": {
+    "aprobadas": [
+     "00007"
+    ],
+    "regularizadas": [
+     "00010",
+     "00012"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00007",
+     "00010",
+     "00012"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 7,
+   "origen": "examen"
+  },
+  {
+   "id": "00802",
+   "nombre": "Geología I",
+   "anio": 2,
+   "semestre": 4,
+   "cursar": {
+    "aprobadas": [],
+    "regularizadas": [
+     "00010"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00010"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 8,
+   "origen": "examen"
+  },
+  {
+   "id": "00017",
+   "nombre": "Electrotecnia",
+   "anio": 3,
+   "semestre": 5,
+   "cursar": {
+    "aprobadas": [
+     "00015",
+     "00001",
+     "00002",
+     "00003",
+     "00008"
+    ],
+    "regularizadas": []
+   },
+   "rendir": {
+    "aprobadas": [
+     "00015",
+     "00001",
+     "00002",
+     "00003",
+     "00008"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 8,
+   "origen": "promocion"
+  },
+  {
+   "id": "00031",
+   "nombre": "Ciencia de los Materiales",
+   "anio": 3,
+   "semestre": 5,
+   "cursar": {
+    "aprobadas": [
+     "00007",
+     "00001",
+     "00002",
+     "00003",
+     "00008"
+    ],
+    "regularizadas": [
+     "00010",
+     "00013"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00007",
+     "00010",
+     "00013",
+     "00001",
+     "00002",
+     "00003",
+     "00008"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 8,
+   "origen": "examen"
+  },
+  {
+   "id": "00041",
+   "nombre": "Perfilaje de Pozos",
+   "anio": 3,
+   "semestre": 5,
+   "cursar": {
+    "aprobadas": [
+     "00015",
+     "00001",
+     "00002",
+     "00003",
+     "00008"
+    ],
+    "regularizadas": [
+     "00802"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00015",
+     "00802",
+     "00001",
+     "00002",
+     "00003",
+     "00008"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 9,
+   "origen": "promocion"
+  },
+  {
+   "id": "00346",
+   "nombre": "Gestión en Seguridad, Medio Ambiente y Salud",
+   "anio": 3,
+   "semestre": 5,
+   "cursar": {
+    "aprobadas": [
+     "00001",
+     "00002",
+     "00003",
+     "00008"
+    ],
+    "regularizadas": [
+     "00020"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00020",
+     "00001",
+     "00002",
+     "00003",
+     "00008"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 8,
+   "origen": "promocion"
+  },
+  {
+   "id": "00803",
+   "nombre": "Físicoquímica",
+   "anio": 3,
+   "semestre": 5,
+   "cursar": {
+    "aprobadas": [
+     "00007",
+     "00001",
+     "00002",
+     "00003",
+     "00008"
+    ],
+    "regularizadas": [
+     "00026",
+     "00028"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00007",
+     "00026",
+     "00028",
+     "00001",
+     "00002",
+     "00003",
+     "00008"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 8,
+   "origen": "promocion"
+  },
+  {
+   "id": "00025",
+   "nombre": "Mecánica Aplicada",
+   "anio": 3,
+   "semestre": 6,
+   "cursar": {
+    "aprobadas": [
+     "00001",
+     "00002",
+     "00003",
+     "00007",
+     "00008",
+     "00010",
+     "00801"
+    ],
+    "regularizadas": [
+     "00031"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00031",
+     "00001",
+     "00002",
+     "00003",
+     "00007",
+     "00008",
+     "00010",
+     "00801"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 9,
+   "origen": "examen"
+  },
+  {
+   "id": "00035",
+   "nombre": "Estabilidad",
+   "anio": 3,
+   "semestre": 6,
+   "cursar": {
+    "aprobadas": [
+     "00007",
+     "00001",
+     "00002",
+     "00003",
+     "00008",
+     "00010",
+     "00801"
+    ],
+    "regularizadas": [
+     "00012"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00007",
+     "00012",
+     "00001",
+     "00002",
+     "00003",
+     "00008",
+     "00010",
+     "00801"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 8,
+   "origen": "examen"
+  },
+  {
+   "id": "00037",
+   "nombre": "Geología del Petróleo",
+   "anio": 3,
+   "semestre": 6,
+   "cursar": {
+    "aprobadas": [
+     "00802",
+     "00041",
+     "00001",
+     "00002",
+     "00003",
+     "00007",
+     "00008",
+     "00010",
+     "00801"
+    ],
+    "regularizadas": []
+   },
+   "rendir": {
+    "aprobadas": [
+     "00802",
+     "00041",
+     "00001",
+     "00002",
+     "00003",
+     "00007",
+     "00008",
+     "00010",
+     "00801"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 9,
+   "origen": "examen"
+  },
+  {
+   "id": "00049",
+   "nombre": "Mecánica de los Fluidos",
+   "anio": 3,
+   "semestre": 6,
+   "cursar": {
+    "aprobadas": [
+     "00001",
+     "00002",
+     "00003",
+     "00007",
+     "00008",
+     "00010",
+     "00801"
+    ],
+    "regularizadas": [
+     "00028"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00028",
+     "00001",
+     "00002",
+     "00003",
+     "00007",
+     "00008",
+     "00010",
+     "00801"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 7,
+   "origen": "examen"
+  },
+  {
+   "id": "00053",
+   "nombre": "Economía y Evaluación de Proyectos",
+   "anio": 3,
+   "semestre": 6,
+   "cursar": {
+    "aprobadas": [
+     "00001",
+     "00002",
+     "00003",
+     "00007",
+     "00008",
+     "00010",
+     "00801"
+    ],
+    "regularizadas": [
+     "00020"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00020",
+     "00001",
+     "00002",
+     "00003",
+     "00007",
+     "00008",
+     "00010",
+     "00801"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 8,
+   "origen": "promocion"
+  },
+  {
+   "id": "00044",
+   "nombre": "Exploración Petrolera",
+   "anio": 4,
+   "semestre": 7,
+   "cursar": {
+    "aprobadas": [
+     "00802",
+     "00012",
+     "00013",
+     "00015"
+    ],
+    "regularizadas": [
+     "00037"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00802",
+     "00037"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 8,
+   "origen": "examen"
+  },
+  {
+   "id": "00050",
+   "nombre": "Operaciones Unitarias",
+   "anio": 4,
+   "semestre": 7,
+   "cursar": {
+    "aprobadas": [
+     "00803",
+     "00012",
+     "00013",
+     "00015"
+    ],
+    "regularizadas": [
+     "00049"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00803",
+     "00049",
+     "00012",
+     "00013",
+     "00015"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 9,
+   "origen": "promocion"
+  },
+  {
+   "id": "00059",
+   "nombre": "Perforación I",
+   "anio": 4,
+   "semestre": 7,
+   "cursar": {
+    "aprobadas": [
+     "00041",
+     "00012",
+     "00013",
+     "00015"
+    ],
+    "regularizadas": [
+     "00017",
+     "00031",
+     "00037"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00041",
+     "00017",
+     "00031",
+     "00037",
+     "00012",
+     "00013",
+     "00015"
+    ]
+   },
+   "estado": "regularizada"
+  },
+  {
+   "id": "00061",
+   "nombre": "Reservorios I",
+   "anio": 4,
+   "semestre": 7,
+   "cursar": {
+    "aprobadas": [
+     "00041",
+     "00012",
+     "00013",
+     "00015"
+    ],
+    "regularizadas": [
+     "00037",
+     "00049"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00041",
+     "00037",
+     "00049",
+     "00012",
+     "00013",
+     "00015"
+    ]
+   },
+   "estado": "aprobada",
+   "nota": 10,
+   "origen": "examen"
+  },
+  {
+   "id": "00063",
+   "nombre": "Aguas Subterráneas",
+   "anio": 4,
+   "semestre": 8,
+   "cursar": {
+    "aprobadas": [
+     "00049",
+     "00020",
+     "00026",
+     "00028",
+     "00802"
+    ],
+    "regularizadas": [
+     "00059"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00049",
+     "00059",
+     "00020",
+     "00026",
+     "00028",
+     "00802"
+    ]
+   },
+   "estado": "en_curso"
+  },
+  {
+   "id": "00073",
+   "nombre": "Perforación II",
+   "anio": 4,
+   "semestre": 8,
+   "cursar": {
+    "aprobadas": [
+     "00041",
+     "00020",
+     "00026",
+     "00028",
+     "00802"
+    ],
+    "regularizadas": [
+     "00049",
+     "00059"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00041",
+     "00049",
+     "00059",
+     "00020",
+     "00026",
+     "00028",
+     "00802"
+    ]
+   },
+   "estado": "en_curso"
+  },
+  {
+   "id": "00075",
+   "nombre": "Reservorios II",
+   "anio": 4,
+   "semestre": 8,
+   "cursar": {
+    "aprobadas": [
+     "00041",
+     "00020",
+     "00026",
+     "00028",
+     "00802"
+    ],
+    "regularizadas": [
+     "00044",
+     "00049",
+     "00061"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00041",
+     "00044",
+     "00049",
+     "00061",
+     "00020",
+     "00026",
+     "00028",
+     "00802"
+    ]
+   },
+   "estado": "en_curso"
+  },
+  {
+   "id": "00804",
+   "nombre": "Administración de Operaciones",
+   "anio": 4,
+   "semestre": 8,
+   "cursar": {
+    "aprobadas": [
+     "00020",
+     "00026",
+     "00028",
+     "00802"
+    ],
+    "regularizadas": [
+     "00053"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00053",
+     "00020",
+     "00026",
+     "00028",
+     "00802"
+    ]
+   },
+   "estado": "en_curso"
+  },
+  {
+   "id": "00113",
+   "nombre": "Informática Aplicada",
+   "anio": 5,
+   "semestre": 9,
+   "cursar": {
+    "aprobadas": [
+     "00017",
+     "00031",
+     "00041",
+     "00346",
+     "00803"
+    ],
+    "regularizadas": [
+     "00804"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00804",
+     "00017",
+     "00031",
+     "00041",
+     "00346",
+     "00803"
+    ]
+   },
+   "estado": "sin_cursar"
+  },
+  {
+   "id": "00120",
+   "nombre": "Producción I",
+   "anio": 5,
+   "semestre": 9,
+   "cursar": {
+    "aprobadas": [
+     "00059",
+     "00017",
+     "00031",
+     "00041",
+     "00346",
+     "00803"
+    ],
+    "regularizadas": [
+     "00061",
+     "00075"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00059",
+     "00061",
+     "00075",
+     "00017",
+     "00031",
+     "00041",
+     "00346",
+     "00803"
+    ]
+   },
+   "estado": "sin_cursar"
+  },
+  {
+   "id": "00123",
+   "nombre": "Reservorios III",
+   "anio": 5,
+   "semestre": 9,
+   "cursar": {
+    "aprobadas": [
+     "00061",
+     "00017",
+     "00031",
+     "00041",
+     "00346",
+     "00803"
+    ],
+    "regularizadas": [
+     "00075"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00061",
+     "00075",
+     "00017",
+     "00031",
+     "00041",
+     "00346",
+     "00803"
+    ]
+   },
+   "estado": "sin_cursar"
+  },
+  {
+   "id": "00805",
+   "nombre": "Legislación en Ingeniería",
+   "anio": 5,
+   "semestre": 9,
+   "cursar": {
+    "aprobadas": [
+     "00053",
+     "00017",
+     "00031",
+     "00041",
+     "00346",
+     "00803"
+    ],
+    "regularizadas": []
+   },
+   "rendir": {
+    "aprobadas": [
+     "00053",
+     "00017",
+     "00031",
+     "00041",
+     "00346",
+     "00803"
+    ]
+   },
+   "estado": "sin_cursar"
+  },
+  {
+   "id": "00023",
+   "nombre": "Instrumentación y Control Automático",
+   "anio": 5,
+   "semestre": 10,
+   "cursar": {
+    "aprobadas": [
+     "00050",
+     "00037",
+     "00049",
+     "00025",
+     "00035",
+     "00053"
+    ],
+    "regularizadas": []
+   },
+   "rendir": {
+    "aprobadas": [
+     "00050",
+     "00037",
+     "00049",
+     "00025",
+     "00035",
+     "00053"
+    ]
+   },
+   "estado": "sin_cursar"
+  },
+  {
+   "id": "00065",
+   "nombre": "Gas y Gasolina",
+   "anio": 5,
+   "semestre": 10,
+   "cursar": {
+    "aprobadas": [
+     "00050",
+     "00025",
+     "00035",
+     "00037",
+     "00049",
+     "00053"
+    ],
+    "regularizadas": [
+     "00120"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00050",
+     "00120",
+     "00025",
+     "00035",
+     "00037",
+     "00049",
+     "00053"
+    ]
+   },
+   "estado": "sin_cursar"
+  },
+  {
+   "id": "00097",
+   "nombre": "Producción II",
+   "anio": 5,
+   "semestre": 10,
+   "cursar": {
+    "aprobadas": [
+     "00073",
+     "00025",
+     "00035",
+     "00037",
+     "00049",
+     "00053"
+    ],
+    "regularizadas": [
+     "00120"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00073",
+     "00120",
+     "00037",
+     "00049",
+     "00025",
+     "00035",
+     "00053"
+    ]
+   },
+   "estado": "sin_cursar"
+  },
+  {
+   "id": "00164",
+   "nombre": "Práctica Profesional Supervisada",
+   "anio": 5,
+   "semestre": 10,
+   "cursar": {
+    "aprobadas": [
+     "00123",
+     "00120",
+     "00073",
+     "00025",
+     "00035",
+     "00037",
+     "00049",
+     "00053"
+    ],
+    "regularizadas": [
+     "00097",
+     "00806"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00123",
+     "00120",
+     "00073",
+     "00097",
+     "00806",
+     "00037",
+     "00049",
+     "00025",
+     "00035",
+     "00053"
+    ]
+   },
+   "estado": "sin_cursar"
+  },
+  {
+   "id": "00806",
+   "nombre": "Administración de Proyectos",
+   "anio": 5,
+   "semestre": 10,
+   "cursar": {
+    "aprobadas": [
+     "00037",
+     "00049",
+     "00025",
+     "00035",
+     "00053"
+    ],
+    "regularizadas": [
+     "00804"
+    ]
+   },
+   "rendir": {
+    "aprobadas": [
+     "00804",
+     "00037",
+     "00049",
+     "00025",
+     "00035",
+     "00053"
+    ]
+   },
+   "estado": "sin_cursar"
+  }
+ ]
+}
