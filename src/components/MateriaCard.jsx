@@ -19,7 +19,7 @@ export default function MateriaCard({ materia, ev, datos, porId, onClick }) {
         {nota != null && (
           <span className="shrink-0 text-right" title={datos.origen ? ORIGEN_LABEL[datos.origen] : ''}>
             <span className="block text-lg font-bold leading-none tabular-nums">{nota}</span>
-            {datos.origen === 'promocion' && <span className="text-[9px] font-semibold uppercase tracking-wide text-muted">Promo</span>}
+            {datos.origen === 'promocion' && <span className="mt-0.5 block whitespace-nowrap text-[10px] font-medium leading-none text-muted">Promocionado</span>}
           </span>
         )}
       </div>

@@ -50,7 +50,7 @@ export default function Optativas({ catalogo, optativas, reglas, setOptativa, qu
                   {d.nota != null && (
                     <span className="shrink-0 text-right">
                       <span className="block text-lg font-bold leading-none tabular-nums">{d.nota}</span>
-                      {d.origen === 'promocion' && <span className="text-[9px] font-semibold uppercase tracking-wide text-muted">Promo</span>}
+                      {d.origen === 'promocion' && <span className="mt-0.5 block whitespace-nowrap text-[10px] font-medium leading-none text-muted">Promocionado</span>}
                     </span>
                   )}
                 </div>
