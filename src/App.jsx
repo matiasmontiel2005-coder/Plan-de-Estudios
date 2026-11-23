@@ -50,6 +50,18 @@ export default function App() {
       deshacer: () => setEstado(id, previo.estado, previo.nota, previo.origen),
     });
   };
+  // Optativas: guardar y quitar también se pueden deshacer.
+  const nombreOptativa = (id) => plan.optativas_disponibles.find((t) => t.includes(`(${id})`))?.replace(/\s*\(\d+\)\s*$/, '') ?? id;
+  const guardarOptativa = (id, datos) => {
+    const previo = progress.optativas[id] ?? null;
+    setOptativa(id, datos);
+    setToast({ texto: `${nombreOptativa(id)}: aprobada${datos.nota != null ? ` (${datos.nota})` : ''}`, deshacer: () => setOptativa(id, previo) });
+  };
+  const quitarOptativa = (id) => {
+    const previo = progress.optativas[id];
+    setOptativa(id, null);
+    setToast({ texto: `${nombreOptativa(id)}: quitada`, deshacer: () => setOptativa(id, previo) });
+  };
   const cerrarToast = useCallback(() => setToast(null), []);
   const irA = (id) => { setTab(id); window.scrollTo({ top: 0 }); };
 
@@ -95,7 +107,7 @@ export default function App() {
 
       <main className="mx-auto max-w-6xl px-4 py-6">
         {tab === 'avance' && <Dashboard plan={plan} stats={stats} evals={evals} porId={porId} clave={clave} />}
-        {tab === 'malla' && <Curriculum plan={plan} evals={evals} progress={progress} porId={porId} onSelect={setEditId} setOptativa={setOptativa} />}
+        {tab === 'malla' && <Curriculum plan={plan} evals={evals} progress={progress} porId={porId} onSelect={setEditId} setOptativa={guardarOptativa} quitarOptativa={quitarOptativa} />}
         {tab === 'grafo' && <GraphView plan={plan} evals={evals} porId={porId} onEdit={setEditId} />}
         {tab === 'simulador' && <Simulator plan={plan} progress={progress} evals={evals} />}
         {tab === 'planificador' && <Planner plan={plan} progress={progress} evals={evals} porId={porId} setPlanificador={setPlanificador} />}

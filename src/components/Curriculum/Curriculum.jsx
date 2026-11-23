@@ -18,7 +18,7 @@ const FILTROS = [
 ];
 
 /** Malla curricular: búsqueda, filtros y un bloque por año (los completos se pliegan). */
-export default function Curriculum({ plan, evals, progress, porId, onSelect, setOptativa }) {
+export default function Curriculum({ plan, evals, progress, porId, onSelect, setOptativa, quitarOptativa }) {
   const [filtro, setFiltro] = useState('todas');
   const [busqueda, setBusqueda] = useState('');
   const [abiertos, setAbiertos] = useState({}); // { [anio]: boolean } elegido por el usuario
@@ -105,7 +105,7 @@ export default function Curriculum({ plan, evals, progress, porId, onSelect, set
       </div>
 
       {!filtrando && (
-        <Optativas catalogo={catalogoOptativas(plan)} optativas={progress.optativas} reglas={plan.reglas.optativas} setOptativa={setOptativa} />
+        <Optativas catalogo={catalogoOptativas(plan)} optativas={progress.optativas} reglas={plan.reglas.optativas} setOptativa={setOptativa} quitarOptativa={quitarOptativa} />
       )}
     </div>
   );
