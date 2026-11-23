@@ -1,7 +1,9 @@
 import { useRef, useState } from 'react';
 import { exportarProgreso, importarProgreso } from '../lib/progress.js';
+import Icon from './Icon.jsx';
+import { Button, Card, PageHeader } from './ui.jsx';
 
-/** Botones para exportar/importar el progreso en JSON y para reiniciarlo. */
+/** Exportar/importar el progreso en JSON y reiniciarlo. */
 export default function ImportExport({ plan, progress, onImport, onReset }) {
   const inputRef = useRef(null);
   const [mensaje, setMensaje] = useState(null); // { tipo: 'ok' | 'error', texto }
@@ -31,19 +33,38 @@ export default function ImportExport({ plan, progress, onImport, onReset }) {
     }
   };
 
-  const boton = 'rounded-lg border border-line2 px-3 py-1.5 text-sm font-medium hover:bg-tint';
+  const reiniciar = () => {
+    if (!window.confirm('Se descartan tus cambios y se vuelve a los datos del plan. ¿Continuar?')) return;
+    onReset();
+    setMensaje({ tipo: 'ok', texto: 'Progreso reiniciado.' });
+  };
+
+  const Fila = ({ icono, titulo, texto, children }) => (
+    <div className="flex flex-col gap-3 py-4 first:pt-0 last:pb-0 sm:flex-row sm:items-center">
+      <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-tint text-primary"><Icon name={icono} /></span>
+      <div className="flex-1"><p className="font-semibold">{titulo}</p><p className="text-sm text-muted">{texto}</p></div>
+      {children}
+    </div>
+  );
+
   return (
-    <div className="mx-auto max-w-2xl space-y-4">
-      <p className="text-sm text-muted">
-        Tu progreso se guarda solo en este navegador. Exportalo para tener una copia o para pasarlo a otro dispositivo.
-      </p>
-      <div className="flex flex-wrap gap-2">
-        <button className={boton} onClick={exportar}>⬇ Exportar JSON</button>
-        <button className={boton} onClick={() => inputRef.current.click()}>⬆ Importar JSON</button>
-        <button className={`${boton} text-red-600`} onClick={() => window.confirm('Se descartan tus cambios y se vuelve a los datos de plan.json. ¿Continuar?') && (onReset(), setMensaje({ tipo: 'ok', texto: 'Progreso reiniciado.' }))}>↺ Reiniciar</button>
+    <div className="mx-auto max-w-3xl">
+      <PageHeader titulo="Respaldo" descripcion="Tu progreso se guarda solo en este navegador. Exportalo para tener una copia o pasarlo a otro dispositivo." />
+      <Card className="divide-y divide-line">
+        <Fila icono="datos" titulo="Exportar progreso" texto="Descarga un archivo .json con tus estados, notas, optativas y plan de cuatrimestre.">
+          <Button variant="primary" onClick={exportar}>Exportar</Button>
+        </Fila>
+        <Fila icono="upload" titulo="Importar progreso" texto="Carga un archivo exportado. Se valida antes de reemplazar nada.">
+          <Button onClick={() => inputRef.current.click()}>Importar</Button>
+        </Fila>
+        <Fila icono="reset" titulo="Reiniciar" texto="Vuelve a los datos originales del plan (SIU Guaraní).">
+          <Button variant="danger" onClick={reiniciar}>Reiniciar</Button>
+        </Fila>
         <input ref={inputRef} type="file" accept="application/json,.json" className="hidden" onChange={importar} />
-      </div>
-      {mensaje && <p role="status" className={`whitespace-pre-line text-sm ${mensaje.tipo === 'error' ? 'text-red-600' : 'text-primary'}`}>{mensaje.texto}</p>}
+      </Card>
+      {mensaje && (
+        <p role="status" className={`mt-3 whitespace-pre-line rounded-xl p-3 text-sm ${mensaje.tipo === 'error' ? 'bg-red-50 text-red-800 dark:bg-red-500/10 dark:text-red-200' : 'bg-tint text-primary'}`}>{mensaje.texto}</p>
+      )}
     </div>
   );
 }

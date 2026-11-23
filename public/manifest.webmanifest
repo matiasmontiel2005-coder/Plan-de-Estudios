@@ -1,0 +1,17 @@
+{
+  "name": "Trayecto · Ingeniería de Petróleos",
+  "short_name": "Trayecto",
+  "description": "Seguí tu avance en la carrera: correlativas, notas y qué podés cursar o rendir.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F9FCF8",
+  "theme_color": "#0F3D2E",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

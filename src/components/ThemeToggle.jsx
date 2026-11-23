@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Icon from './Icon.jsx';
 
 /** Alterna modo claro/oscuro (clase "dark" en <html>) y recuerda la elección. */
 export default function ThemeToggle() {
@@ -8,9 +9,9 @@ export default function ThemeToggle() {
     try { localStorage.setItem('tema', oscuro ? 'dark' : 'light'); } catch { /* ignorar */ }
   }, [oscuro]);
   return (
-    <button onClick={() => setOscuro(!oscuro)} aria-label="Cambiar entre modo claro y oscuro"
-      className="rounded-full border border-white/30 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20">
-      {oscuro ? '☀️' : '🌙'}
+    <button onClick={() => setOscuro(!oscuro)} aria-label={oscuro ? 'Activar modo claro' : 'Activar modo oscuro'}
+      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-brand-50 transition hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300">
+      <Icon name={oscuro ? 'sun' : 'moon'} className="h-5 w-5" />
     </button>
   );
 }

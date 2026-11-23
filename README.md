@@ -1,6 +1,15 @@
-# Plan de estudios · Ingeniería de Petróleos (FING UNCUYO, plan 02/16)
+# Trayecto · Ingeniería de Petróleos (FING UNCUYO, plan 02/16)
 
 Web app para seguir el avance de la carrera y ver qué materias se pueden cursar o rendir.
+Se puede instalar en el celular como app (PWA): en el navegador, "Agregar a pantalla de inicio".
+
+## Secciones
+
+- **Resumen**: avance, promedio, qué podés cursar/rendir hoy, materias clave (las que más destraban) y requisitos de egreso.
+- **Malla**: búsqueda, filtros (para hacer, cursando, bloqueadas, pendientes) y años completos plegados. Cada cambio se puede deshacer.
+- **Correlativas**: grafo con previas y desbloqueos.
+- **Simulador** y **Planificador** de cuatrimestre.
+- **Respaldo**: exportar, importar y reiniciar.
 React + Vite + Tailwind, sin backend: el progreso se guarda en el `localStorage` del navegador.
 
 ## Correrlo
@@ -31,6 +40,7 @@ vive en tu navegador; usá la pestaña **Datos** para exportarlo/importarlo en J
 | **Puede rendir** | estaba regularizada o en curso y todas las de `rendir.aprobadas` aprobadas |
 | **Bloqueada** | no cumple; se informa "falta aprobar" y "falta regularizar" por separado |
 | **Inglés B2** | sin él, ninguna materia del 10.º semestre es inscribible (la tarjeta avisa "Falta inglés B2") |
+| **Materias clave** | simula aprobar cada materia pendiente y ordena por cuántas materias destraba |
 | **Optativas** | 25 puntos cada una, 100 requeridos. El plan no trae sus correlativas: solo se registran como aprobadas |
 
 El grafo dibuja solo correlatividades directas (el SIU lista también las correlativas de las correlativas).

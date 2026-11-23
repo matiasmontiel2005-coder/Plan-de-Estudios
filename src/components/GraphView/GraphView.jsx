@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { construirGrafo } from '../../lib/graph.js';
 import { STATUS_META } from '../statusStyles.js';
 import Leyenda from '../Leyenda.jsx';
+import { PageHeader } from '../ui.jsx';
 
 // Medidas del dibujo (px)
 const W = 168, H = 54, GX = 72, GY = 16, PAD = 16, HEAD = 26;
@@ -39,17 +40,17 @@ export default function GraphView({ plan, evals, porId, onEdit }) {
 
   return (
     <div>
-      <div className="mb-3 space-y-1">
+      <PageHeader titulo="Correlativas" descripcion="Pasá el mouse o tocá una materia para ver sus previas y lo que desbloquea." />
+      <div className="mb-3 space-y-2">
         <Leyenda />
         <p className="flex flex-wrap gap-x-4 text-xs text-muted">
-          <span>Pasá el mouse o tocá una materia.</span>
-          <span><b className="text-amber-600">Naranja</b> = sus previas</span>
+                    <span><b className="text-amber-600">Naranja</b> = sus previas</span>
           <span><b className="text-emerald-600">Verde</b> = lo que desbloquea</span>
           <span>Solo se dibujan correlatividades directas.</span>
         </p>
       </div>
 
-      <div className="overflow-x-auto rounded-xl border border-line bg-surface">
+      <div className="overflow-x-auto rounded-2xl border border-line bg-surface shadow-soft">
         <div className="relative" style={{ width: ancho, height: alto }}>
           {semestres.map((s) => (
             <div key={s} className="absolute text-xs font-semibold uppercase text-muted" style={{ left: PAD + (s - 1) * (W + GX), top: PAD - 4 }}>
@@ -80,7 +81,7 @@ export default function GraphView({ plan, evals, porId, onEdit }) {
                 onMouseEnter={() => setHover(mat.id)} onMouseLeave={() => setHover(null)}
                 onFocus={() => setHover(mat.id)} onBlur={() => setHover(null)}
                 onClick={() => setFijada(fijada === mat.id ? null : mat.id)}
-                className={`absolute overflow-hidden rounded-md border-2 px-2 py-1 text-left text-[11px] font-semibold leading-tight transition-opacity ${meta.card} ${anillo} ${relacionada ? 'opacity-100' : 'opacity-25'}`}
+                className={`absolute overflow-hidden rounded-lg border px-2 py-1 text-left text-[11px] font-semibold leading-tight transition-opacity ${meta.card} ${anillo} ${relacionada ? 'opacity-100' : 'opacity-25'}`}
                 style={{ left: pos[mat.id].x, top: pos[mat.id].y, width: W, height: H }}
                 title={`${mat.nombre} — ${meta.label}`}>
                 <span className="line-clamp-3">{mat.nombre}</span>
@@ -91,13 +92,13 @@ export default function GraphView({ plan, evals, porId, onEdit }) {
       </div>
 
       {/* Detalle de la selección (tap en celular) */}
-      <div className="mt-3 min-h-[5rem] rounded-xl border border-line bg-surface p-3 text-sm">
+      <div className="mt-3 min-h-[5rem] rounded-2xl border border-line bg-surface p-4 shadow-soft text-sm">
         {m ? (
           <div className="space-y-1">
             <p className="font-semibold">{m.nombre} <span className="text-xs font-normal text-muted">· {STATUS_META[evals[m.id].categoria].label}</span></p>
             <p><b className="text-amber-600">Previas directas:</b> {lista(previas[m.id])}</p>
             <p><b className="text-emerald-600">Desbloquea:</b> {lista(desbloquea[m.id])}</p>
-            <button onClick={() => onEdit(m.id)} className="mt-1 rounded-md bg-primary px-3 py-1 text-xs font-semibold text-onprimary">Cambiar estado</button>
+            <button onClick={() => onEdit(m.id)} className="mt-1 rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-onprimary">Cambiar estado</button>
           </div>
         ) : <p className="text-muted">Seleccioná una materia para ver sus previas y lo que desbloquea.</p>}
       </div>
